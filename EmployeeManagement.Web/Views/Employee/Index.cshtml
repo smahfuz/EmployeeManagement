@@ -1,5 +1,128 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<EmployeeManagement.Core.Models.Employee>
+
 @{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+<!-- Search Box -->
+<div class="search-container">
+    <form asp-action="Index" method="get" class="form-inline search-box">
+        <div class="form-group">
+            <input type="text" name="Name" class="form-control" placeholder="Name" />
+            <input type="text" name="DateOfBirth" class="form-control" placeholder="Date of Birth" />
+            <input type="email" name="Email" class="form-control" placeholder="Email" />
+            <input type="text" name="Mobile" class="form-control" placeholder="Mobile" />
+            <button type="submit" class="btn btn-primary search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- Employee Table -->
+<table class="table table-bordered employee-table">
+    <thead>
+        <tr>
+            <th>Photo</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Date Of Birth</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Content(item.PhotoPath)" alt="Employee Photo" style="width:50px;height:50px;" />
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.Mobile)</td>
+                <td>@Html.DisplayFor(modelItem => item.DateOfBirth)</td>
+                <td>
+                    <!-- Edit Button with Guid -->
+                    <a asp-controller="Employee" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+                        <i class="fas fa-edit"></i>
+                    </a>
+
+                    <!-- Delete Button with Guid -->
+                    <a asp-controller="Employee" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Pagination (if needed) -->
+<div class="pagination-container">
+    <!-- Implement pagination here if needed -->
+</div>
+
+<!-- CSS Styles -->
+<style>
+    .search-container {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .search-box {
+        border: 2px solid #ccc; /* Border around the search box */
+        border-radius: 10px; /* Rounded corners */
+        padding: 10px; /* Padding inside the box */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form-group {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form-control {
+        width: calc(100% / 5 - 15px); /* Adjust input field width */
+    }
+
+    .search-btn {
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        color: #007bff;
+    }
+
+    .employee-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+        .employee-table th, .employee-table td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .employee-table th {
+            background-color: #f1f1f1;
+        }
+
+    .pagination-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn i {
+        margin-right: 5px;
+    }
+</style>
