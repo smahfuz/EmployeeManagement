@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeManagement.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagement.Service.Services.IService
 {
-    internal interface IEmployeeService
+    public interface IEmployeeService
     {
+        Task InsertAsync(Employee obj);
+        Task UpdateAsync(Employee obj);
+        Task DeleteAsync(Employee obj);
+        Task SaveChangesAsync();
+        Task<IEnumerable<Employee>> GetAllAsync();
+        Task<Employee> GetIdAsync(Guid id);
     }
 }

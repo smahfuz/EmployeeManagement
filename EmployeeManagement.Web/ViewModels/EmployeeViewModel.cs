@@ -4,12 +4,13 @@ namespace EmployeeManagement.Web.ViewModels
 {
     public class EmployeeViewModel : BaseEntity
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Mobile { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Email { get; set; }
+        public string? Mobile { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string PhotoPath { get; set; }
-        public IFormFile Images { get; set; }
+        public string? PhotoPath { get; set; }
+        public IFormFile? ImageFile { get; set; }
+        public string? FullName { get; set; }
     }
 }
