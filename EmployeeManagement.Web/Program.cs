@@ -1,9 +1,23 @@
+using EmployeeManagement.Repo.Data;
+using EmployeeManagement.Repo.IRepositories;
+using EmployeeManagement.Repo.Repositories;
+using EmployeeManagement.Service.Services.IService;
+using EmployeeManagement.Service.Services.Service;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<EmployeeDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("fuzz")));
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

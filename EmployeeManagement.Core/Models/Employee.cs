@@ -1,6 +1,7 @@
 ﻿using EmployeeManagement.Core.Models.Base;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,16 @@ namespace EmployeeManagement.Core.Models
         public string Mobile { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string PhotoPath { get; set; }
-       
+
+        [NotMapped]
+        public string FullName {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }  
+        }
+        
+
     }
 
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Web\\EmployeeManagement.Web.csproj": {}
+    "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\EmployeeManagement.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj": {
+    "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
+        "projectUniqueName": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
         "projectName": "EmployeeManagement.Core",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
+        "projectPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Core\\obj\\",
+        "outputPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,6 +59,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.8, )"
             }
           },
           "imports": [
@@ -81,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj": {
+    "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj",
+        "projectUniqueName": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj",
         "projectName": "EmployeeManagement.Repo",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj",
+        "projectPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Repo\\obj\\",
+        "outputPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Repo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,8 +110,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj": {
-                "projectPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj"
+              "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj": {
+                "projectPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj"
               }
             }
           }
@@ -140,6 +144,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.8, )"
             }
           },
           "imports": [
@@ -162,14 +170,14 @@
         }
       }
     },
-    "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj": {
+    "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj",
+        "projectUniqueName": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj",
         "projectName": "EmployeeManagement.Service",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj",
+        "projectPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Service\\obj\\",
+        "outputPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -187,8 +195,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj": {
-                "projectPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj"
+              "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj": {
+                "projectPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj"
+              },
+              "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj": {
+                "projectPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Repo\\EmployeeManagement.Repo.csproj"
               }
             }
           }
@@ -219,6 +230,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "System.Drawing.Common": {
               "target": "Package",
               "version": "[8.0.8, )"
             }
@@ -243,14 +258,14 @@
         }
       }
     },
-    "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Web\\EmployeeManagement.Web.csproj": {
+    "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\EmployeeManagement.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Web\\EmployeeManagement.Web.csproj",
+        "projectUniqueName": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\EmployeeManagement.Web.csproj",
         "projectName": "EmployeeManagement.Web",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Web\\EmployeeManagement.Web.csproj",
+        "projectPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\EmployeeManagement.Web.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Web\\obj\\",
+        "outputPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -268,8 +283,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj": {
-                "projectPath": "C:\\Users\\Hp\\source\\repos\\EmployeeManagement.Web\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj"
+              "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj": {
+                "projectPath": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Service\\EmployeeManagement.Service.csproj"
               }
             }
           }
@@ -300,6 +315,14 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "System.Drawing.Common": {
               "target": "Package",
               "version": "[8.0.8, )"
             }
