@@ -1,0 +1,15 @@
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\bin\Debug\net8.0\EmployeeManagement.Repo.deps.json
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\bin\Debug\net8.0\EmployeeManagement.Repo.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\bin\Debug\net8.0\EmployeeManagement.Repo.pdb
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\bin\Debug\net8.0\EmployeeManagement.Core.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\bin\Debug\net8.0\EmployeeManagement.Core.pdb
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\EmployeeManagement.Repo.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\EmployeeManagement.Repo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\EmployeeManagement.Repo.AssemblyInfoInputs.cache
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\EmployeeManagement.Repo.AssemblyInfo.cs
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\EmployeeManagement.Repo.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\Employee.88D48790.Up2Date
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\EmployeeManagement.Repo.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\refint\EmployeeManagement.Repo.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\EmployeeManagement.Repo.pdb
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Repo\obj\Debug\net8.0\ref\EmployeeManagement.Repo.dll

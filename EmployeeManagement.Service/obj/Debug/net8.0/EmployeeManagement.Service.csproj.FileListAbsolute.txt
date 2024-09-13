@@ -1,0 +1,17 @@
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Service.deps.json
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Service.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Service.pdb
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Core.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Repo.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Repo.pdb
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Core.pdb
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.AssemblyInfoInputs.cache
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.AssemblyInfo.cs
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\Employee.23F8C8A0.Up2Date
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\refint\EmployeeManagement.Service.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.pdb
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Service\obj\Debug\net8.0\ref\EmployeeManagement.Service.dll

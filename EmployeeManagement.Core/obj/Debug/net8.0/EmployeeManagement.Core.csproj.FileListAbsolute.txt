@@ -1,0 +1,14 @@
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\bin\Debug\net8.0\EmployeeManagement.Core.deps.json
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\bin\Debug\net8.0\EmployeeManagement.Core.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\bin\Debug\net8.0\EmployeeManagement.Core.pdb
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\EmployeeManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\EmployeeManagement.Core.AssemblyInfoInputs.cache
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\EmployeeManagement.Core.AssemblyInfo.cs
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\EmployeeManagement.Core.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\EmployeeManagement.Core.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\refint\EmployeeManagement.Core.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\EmployeeManagement.Core.pdb
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\ref\EmployeeManagement.Core.dll
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\bin\Debug\net8.0\EmployeeManagement.Core.runtimeconfig.json
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\EmployeeManagement.Core.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\EmployeeManagement.Web\EmployeeManagement.Core\obj\Debug\net8.0\EmployeeManagement.Core.genruntimeconfig.cache
