@@ -1,0 +1,53 @@
+﻿
+/* Sidebar with right line adjusted */
+.sidebar {
+    height: calc(100vh - 50px); /* Adjust the height to stop at the footer */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px; /* Increase width to ensure items are in one line */
+    background-color: #fdfefe; /* Light color for sidebar */
+    padding-top: 0px;
+    overflow-y: auto;
+    border-right: 2px solid black; /* Right border */
+    border-top: 2px solid black; /* Top border */
+}
+
+/* Add space around nav links inside the sidebar */
+.nav-item a {
+    padding: 5px 15px; /* Increase padding for better alignment */
+    display: block;
+    color: black; /* Black text color */
+    text-decoration: none;
+    border-bottom: 1px solid black; /* Bottom border between items */
+}
+
+    /* Hover effect */
+    .nav-item a:hover {
+        background-color: #e0e0e0; /* Light gray hover effect */
+    }
+
+    /* Align icons and text */
+    .nav-item a i {
+        margin-right: 10px; /* Proper space between icon and text */
+    }
+
+/* Main content adjusts to sidebar */
+.content-area {
+    margin-left: 190px; /* Adjust for wider sidebar */
+    padding: 20px;
+}
+
+/* Adjust footer, ensuring it stays outside sidebar */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid black; /* Footer's top border */
+    padding: 10px;
+    text-align: center;
+    background-color: #fdfefe;
+}
+
+

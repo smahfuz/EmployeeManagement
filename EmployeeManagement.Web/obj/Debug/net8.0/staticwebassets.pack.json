@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\EmployeeManagement.Web.bundle.scp.css"
     },
     {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout.css"
+    },
+    {
       "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\05eb5746-d3e4-4959-825c-79d8ae576322.jpeg",
+      "PackagePath": "staticwebassets\\images\\05eb5746-d3e4-4959-825c-79d8ae576322.jpeg"
     },
     {
       "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\459239805_2542115099332380_6265797440506644459_n.jpg",
@@ -23,6 +31,18 @@
     {
       "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\459580959_1068166768393807_1843635909708214000_n.jpg",
       "PackagePath": "staticwebassets\\images\\459580959_1068166768393807_1843635909708214000_n.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6095945159247246640.jpg",
+      "PackagePath": "staticwebassets\\images\\6095945159247246640.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6217651681873740061.jpg",
+      "PackagePath": "staticwebassets\\images\\6217651681873740061.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\bio1.jpg",
+      "PackagePath": "staticwebassets\\images\\bio1.jpg"
     },
     {
       "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\js\\site.js",

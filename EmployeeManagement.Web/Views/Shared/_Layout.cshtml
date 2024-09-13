@@ -4,48 +4,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - EmployeeManagement.Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EmployeeManagement.Web.styles.css" asp-append-version="true" />
 
-    <style>
-        /* Full-height sidebar */
-        .sidebar {
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 200px;
-            background-color: #57A6A1;
-            padding-top: 20px;
-            overflow-y: auto;
-        }
-
-        /* Main content adjusts to sidebar */
-        .content-area {
-            margin-left: 250px; /* Same as the sidebar width */
-            padding: 20px;
-        }
-    </style>
+   
 </head>
 <body>
     <nav id="sidebarMenu" class="sidebar">
         <div class="position-sticky">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" asp-area="" asp-controller="Home" asp-action="Index">
-                        Home
+                    <a class="nav-link active text-black" asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i> Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">
-                        Privacy
+                    <a class="nav-link text-black" asp-area="" asp-controller="Employee" asp-action="Index">
+                        <i class="fas fa-user"></i> Employees
                     </a>
                 </li>
-                <!-- Add more sidebar links here -->
+                <li class="nav-item">
+                    <a class="nav-link text-black" asp-area="" asp-controller="Employee" asp-action="Create">
+                        <i class="fas fa-user-plus"></i> Add Employee
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
+
 
     <!-- Main content area -->
     <div class="content-area">
@@ -56,8 +45,11 @@
 
 
     <footer class="border-top footer text-muted">
-        <div class="container">
+        @* <div class="container">
             &copy; 2024 - EmployeeManagement.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div> *@
+        <div class="container">
+            Copyright 2024
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
