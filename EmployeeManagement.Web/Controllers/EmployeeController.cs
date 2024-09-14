@@ -138,4 +138,23 @@ public class EmployeeController : Controller
         await _employeeService.DeleteAsync(obj);
         return Json(new { success = true });
     }
+
+    public async Task<IActionResult> Index1(int pageNumber = 1, int pageSize = 5)
+    {
+        var emp = await _employeeService.GetPagedProductsAsync(pageNumber, pageSize);
+        var totalEmp = await _employeeService.GetTotalProductsCountAsync();
+
+        var totalPages = (int)Math.Ceiling(totalEmp / (double)pageSize);
+
+        var viewModel = new EmployeeViewModel
+        {
+            Employeesv = emp,
+            TotalPages = totalPages,
+            PageNumber = pageNumber,
+            PageSize = pageSize
+        };
+
+        return View(viewModel);
+    }
+
 }

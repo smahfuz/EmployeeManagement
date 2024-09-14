@@ -1,0 +1,155 @@
+﻿@model EmployeeManagement.Web.ViewModels.EmployeeViewModel
+
+<!-- Search Box -->
+<div class="search-container">
+    <form asp-action="Index" method="get" class="form-inline search-box">
+        <div class="form-group">
+            <input type="text" name="Name" class="form-control" placeholder="Name" id="names" />
+            <input type="text" name="DateOfBirth" class="form-control" placeholder="Date of Birth" id="dob" />
+            <input type="email" name="Email" class="form-control" placeholder="Email" id="emails" />
+            <input type="text" name="Mobile" class="form-control" placeholder="Mobile" id="mobile" />
+            <button type="submit" class="btn btn-primary search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Photo</th>
+            <th>Full Name <i class="fas fa-sort"></i></th>
+            <th>Email <i class="fas fa-sort"></i></th>
+            <th>Mobile <i class="fas fa-sort"></i></th>
+            <th>Date Of Birth <i class="fas fa-sort"></i></th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Employeesv)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Content($"~/{item.PhotoPath}")" alt="Employee Photo" style="width:50px;height:50px;" />
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.Mobile)</td>
+                <td>@Html.DisplayFor(modelItem => item.DateOfBirth)</td>
+                <td>
+                    <!-- Edit Button with Guid -->
+                    <a asp-controller="Employee" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+                        <i class="fas fa-edit"></i>
+                    </a>
+
+                    <!-- Delete Button with Guid -->
+                    <a href="javascript:void(0);" class="btn btn-danger delete-btn" data-id="@item.Id">
+                        <i class="fas fa-trash"></i>
+                    </a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <ul class="pagination">
+        <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+            <a class="page-link" asp-action="Index1" asp-route-pageNumber="@(Model.PageNumber - 1)" asp-route-pageSize="@Model.PageSize">Previous</a>
+        </li>
+
+        @for (var i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                <a class="page-link" asp-action="Index1" asp-route-pageNumber="@i" asp-route-pageSize="@Model.PageSize">@i</a>
+            </li>
+        }
+
+        <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+            <a class="page-link" asp-action="Index1" asp-route-pageNumber="@(Model.PageNumber + 1)" asp-route-pageSize="@Model.PageSize">Next</a>
+        </li>
+    </ul>
+</div>
+<style>
+
+    .search-container {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .search-box {
+        border: 2px solid #ccc; /* Border around the search box */
+        border-radius: 10px; /* Rounded corners */
+        padding: 10px; /* Padding inside the box */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form-group {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form-control {
+        width: calc(100% / 5 - 15px); /* Adjust input field width */
+    }
+
+    .search-btn {
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        color: #007bff;
+    }
+
+    .pagination-container {
+        text-align: right; /* Align pagination to the right */
+        margin-top: 20px;
+    }
+
+    .dataTables_paginate {
+        float: right; /* Float pagination controls to the right */
+    }
+
+    .employee-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+        .employee-table th, .employee-table td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .employee-table th {
+            background-color: #f1f1f1;
+        }
+
+    .btn i {
+        margin-right: 5px;
+    }
+
+    .paginate-icon {
+        margin: 0 5px; /* Add space between the icons */
+        font-size: 16px; /* Adjust icon size if necessary */
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        margin: 0 10px; /* Adds space between page numbers */
+        font-size: 16px; /* Adjusts font size for better visibility */
+    }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            background-color: #f1f1f1; /* Adds hover effect */
+            border-radius: 5px;
+        }
+
+</style>
+

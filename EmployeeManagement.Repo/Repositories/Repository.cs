@@ -1,4 +1,5 @@
-﻿using EmployeeManagement.Repo.Data;
+﻿using EmployeeManagement.Core.Models;
+using EmployeeManagement.Repo.Data;
 using EmployeeManagement.Repo.IRepositories;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -62,6 +63,25 @@ namespace EmployeeManagement.Repo.Repositories
         public async Task<T> GetIdAsync(Guid id)
         {
             return await _dbSet.FindAsync(id);
+        }
+        public async Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize)
+        {
+            return await _context.Employees
+                .OrderBy(p => p.Id)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+        }
+
+        public async Task<int> GetTotalProductsCountAsync()
+        {
+            return await _context.Employees.CountAsync();
+        }
+
+        public async Task AddProductAsync(Employee employee)
+        {
+            _context.Employees.Add(employee);
+            await _context.SaveChangesAsync();
         }
 
 

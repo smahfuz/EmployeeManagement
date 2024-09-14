@@ -15,5 +15,8 @@ namespace EmployeeManagement.Service.Services.IService
         Task SaveChangesAsync();
         Task<IEnumerable<Employee>> GetAllAsync();
         Task<Employee> GetIdAsync(Guid id);
+        Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize);
+        Task<int> GetTotalProductsCountAsync();
+        Task AddProductAsync(Employee product);
     }
 }
