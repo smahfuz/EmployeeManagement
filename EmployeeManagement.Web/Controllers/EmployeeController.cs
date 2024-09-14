@@ -73,7 +73,6 @@ public class EmployeeController : Controller
                 // Resize the image
                 var resizedImage = new Bitmap(img, new Size(width, height));
 
-                // Save the resized image to the desired path
                 resizedImage.Save(path);
             }
         }
@@ -86,12 +85,52 @@ public class EmployeeController : Controller
         return View(obj);
     }
 
+ 
     [HttpPost]
     public async Task<IActionResult> Edit(Employee emp)
     {
-        await _employeeService.UpdateAsync(emp);
-        return RedirectToAction("Index");
+        if (ModelState.IsValid)
+        {
+            var existingEmployee = await _employeeService.GetIdAsync(emp.Id);
+
+            if (existingEmployee != null)
+            {
+                if (emp.ImageFile != null)
+                {
+                    var path = _webHostEnvironment.WebRootPath;
+                    var filePath = "images/" + emp.ImageFile.FileName;
+                    var fullPath = Path.Combine(path, filePath);
+
+                    if (!string.IsNullOrEmpty(existingEmployee.PhotoPath))
+                    {
+                        var oldPath = Path.Combine(path, existingEmployee.PhotoPath);
+                        if (System.IO.File.Exists(oldPath))
+                        {
+                            System.IO.File.Delete(oldPath);
+                        }
+                    }
+
+                  
+                    FileUpload(emp.ImageFile, fullPath);
+
+                    existingEmployee.PhotoPath = filePath;
+                }
+
+                existingEmployee.FirstName = emp.FirstName;
+                existingEmployee.LastName = emp.LastName;
+                existingEmployee.DateOfBirth = emp.DateOfBirth;
+                existingEmployee.Email = emp.Email;
+                existingEmployee.Mobile = emp.Mobile;
+
+                await _employeeService.UpdateAsync(existingEmployee);
+
+                return RedirectToAction("Index");
+            }
+        }
+
+        return View(emp);
     }
+
 
     public async Task<IActionResult> Delete(Guid id)
     {

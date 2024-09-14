@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ezkq2/24p4nN2YJedEbEcGMKBnUNAhi0pnun7BQv5fo=",
+  "Hash": "zoyOX53FQl/XnLfiA3WOOFNFqXaEHfSVIYxc2D2LrS0=",
   "Source": "EmployeeManagement.Web",
   "BasePath": "_content/EmployeeManagement.Web",
   "Mode": "Default",
@@ -188,25 +188,6 @@
       "OriginalItemSpec": "wwwroot\\images\\459580959_1068166768393807_1843635909708214000_n.jpg"
     },
     {
-      "Identity": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6095945159247246640.jpg",
-      "SourceId": "EmployeeManagement.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\",
-      "BasePath": "_content/EmployeeManagement.Web",
-      "RelativePath": "images/6095945159247246640.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\6095945159247246640.jpg"
-    },
-    {
       "Identity": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6217651681873740061.jpg",
       "SourceId": "EmployeeManagement.Web",
       "SourceType": "Discovered",
@@ -338,25 +319,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\6296213900802243126.jpg"
-    },
-    {
-      "Identity": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\bio1.jpg",
-      "SourceId": "EmployeeManagement.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\",
-      "BasePath": "_content/EmployeeManagement.Web",
-      "RelativePath": "images/bio1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\bio1.jpg"
     },
     {
       "Identity": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\js\\site.js",

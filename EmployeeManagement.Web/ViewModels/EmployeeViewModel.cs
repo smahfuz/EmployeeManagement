@@ -23,7 +23,7 @@ namespace EmployeeManagement.Web.ViewModels
 
         [Required(ErrorMessage = "Date of Birth is required.")]
         [DataType(DataType.Date, ErrorMessage = "Invalid date format.")]
-        public DateTime DateOfBirth { get; set; }
+        public DateOnly DateOfBirth { get; set; }
 
         public string? PhotoPath { get; set; }
 
