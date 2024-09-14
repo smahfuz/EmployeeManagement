@@ -52,5 +52,20 @@ namespace EmployeeManagement.Service.Services.Service
         {
             await _employeeRepository.UpdateAsync(obj);
         }
+
+        public async Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize)
+        {
+            return await _employeeRepository.GetPagedProductsAsync(pageNumber, pageSize);
+        }
+
+        public async Task<int> GetTotalProductsCountAsync()
+        {
+            return await _employeeRepository.GetTotalProductsCountAsync();
+        }
+
+        public async Task AddProductAsync(Employee employee)
+        {
+            await _employeeRepository.AddProductAsync(employee);
+        }
     }
 }

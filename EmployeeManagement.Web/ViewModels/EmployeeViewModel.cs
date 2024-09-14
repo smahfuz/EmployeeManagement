@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using EmployeeManagement.Core.Models;
 using EmployeeManagement.Core.Models.Base;
 
 namespace EmployeeManagement.Web.ViewModels
@@ -31,5 +32,14 @@ namespace EmployeeManagement.Web.ViewModels
         public IFormFile? ImageFile { get; set; }
 
         public string? FullName { get; set; }
+
+
+        public List<Employee>? Employeesv { get; set; }
+        public int? TotalPages { get; set; }
+        public int? PageNumber { get; set; }
+        public int? PageSize { get; set; }
+
+        public bool HasPreviousPage => PageNumber > 1;
+        public bool HasNextPage => PageNumber < TotalPages;
     }
 }
