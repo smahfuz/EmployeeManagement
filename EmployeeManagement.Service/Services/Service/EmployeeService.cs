@@ -22,6 +22,7 @@ namespace EmployeeManagement.Service.Services.Service
         public async Task DeleteAsync(Employee obj)
         {
            _employeeRepository.DeleteAsync(obj);
+            _employeeRepository.SaveChangesAsync();
 
         }
         

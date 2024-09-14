@@ -41,6 +41,30 @@
       "PackagePath": "staticwebassets\\images\\6217651681873740061.jpg"
     },
     {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6228906738162186681.jpg",
+      "PackagePath": "staticwebassets\\images\\6228906738162186681.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6228906738162186682.jpg",
+      "PackagePath": "staticwebassets\\images\\6228906738162186682.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6228906738162186683.jpg",
+      "PackagePath": "staticwebassets\\images\\6228906738162186683.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6228906738162186685.jpg",
+      "PackagePath": "staticwebassets\\images\\6228906738162186685.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6296213900802243125.jpg",
+      "PackagePath": "staticwebassets\\images\\6296213900802243125.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6296213900802243126.jpg",
+      "PackagePath": "staticwebassets\\images\\6296213900802243126.jpg"
+    },
+    {
       "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\bio1.jpg",
       "PackagePath": "staticwebassets\\images\\bio1.jpg"
     },
@@ -227,6 +251,170 @@
     {
       "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap4.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap4.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap4.min.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.foundation.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.foundation.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.foundation.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.foundation.min.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.jqueryui.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.jqueryui.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.jqueryui.min.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.material.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.material.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.material.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.material.min.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.semanticui.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.semanticui.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.semanticui.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.semanticui.min.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.uikit.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.uikit.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\datatables.uikit.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.uikit.min.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\jquery.datatables.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\jquery.datatables.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables.min.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\jquery.datatables_themeroller.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables_themeroller.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\css\\jquery.datatables_themeroller.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables_themeroller.min.css"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\images\\sort_asc.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc.png"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\images\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\images\\sort_both.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_both.png"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\images\\sort_desc.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc.png"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\images\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap4.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap4.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap4.min.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.datatables.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.datatables.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.datatables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.datatables.min.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.foundation.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.foundation.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.foundation.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.foundation.min.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.jqueryui.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.jqueryui.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.jqueryui.min.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.material.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.material.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.material.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.material.min.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.semanticui.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.semanticui.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.semanticui.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.semanticui.min.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.uikit.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.uikit.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\datatables.uikit.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.uikit.min.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\jquery.datatables.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.datatables.js"
+    },
+    {
+      "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\datatables\\js\\jquery.datatables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.datatables.min.js"
     },
     {
       "Id": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

@@ -97,6 +97,6 @@ public class EmployeeController : Controller
     {
         var obj = await _employeeService.GetIdAsync(id);
         await _employeeService.DeleteAsync(obj);
-        return RedirectToAction("Index");
+        return Json(new { success = true });
     }
 }
