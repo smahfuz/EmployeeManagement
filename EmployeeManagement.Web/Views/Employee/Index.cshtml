@@ -10,10 +10,10 @@
 <div class="search-container">
     <form asp-action="Index" method="get" class="form-inline search-box">
         <div class="form-group">
-            <input type="text" name="Name" class="form-control" placeholder="Name" />
-            <input type="text" name="DateOfBirth" class="form-control" placeholder="Date of Birth" />
-            <input type="email" name="Email" class="form-control" placeholder="Email" />
-            <input type="text" name="Mobile" class="form-control" placeholder="Mobile" />
+            <input type="text" name="Name" class="form-control" placeholder="Name" id="names" />
+            <input type="text" name="DateOfBirth" class="form-control" placeholder="Date of Birth" id="dob" />
+            <input type="email" name="Email" class="form-control" placeholder="Email" id="emails" />
+            <input type="text" name="Mobile" class="form-control" placeholder="Mobile" id="mobile" />
             <button type="submit" class="btn btn-primary search-btn">
                 <i class="fas fa-search"></i>
             </button>
@@ -21,15 +21,17 @@
     </form>
 </div>
 
+
+
 <!-- Employee Table -->
-<table class="table table-bordered employee-table">
+<table class="table table-bordered employee-table" id="tbid">
     <thead>
         <tr>
             <th>Photo</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Mobile</th>
-            <th>Date Of Birth</th>
+            <th>Full Name <i class="fas fa-sort"></i></th>
+            <th>Email <i class="fas fa-sort"></i></th>
+            <th>Mobile <i class="fas fa-sort"></i></th>
+            <th>Date Of Birth <i class="fas fa-sort"></i></th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -51,9 +53,10 @@
                     </a>
 
                     <!-- Delete Button with Guid -->
-                    <a asp-controller="Employee" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                    <a href="javascript:void(0);" class="btn btn-danger delete-btn" data-id="@item.Id">
                         <i class="fas fa-trash"></i>
                     </a>
+
                 </td>
             </tr>
         }
@@ -67,6 +70,7 @@
 
 <!-- CSS Styles -->
 <style>
+   
     .search-container {
         margin-bottom: 20px;
         display: flex;
@@ -101,7 +105,42 @@
         color: #007bff;
     }
 
+    .pagination-container {
+        text-align: right; /* Align pagination to the right */
+        margin-top: 20px;
+    }
+
+    .dataTables_paginate {
+        float: right; /* Float pagination controls to the right */
+    }
+
     .employee-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+        .employee-table th, .employee-table td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .employee-table th {
+            background-color: #f1f1f1;
+        }
+
+    .btn i {
+        margin-right: 5px;
+    }
+    .paginate-icon {
+        margin: 0 5px; /* Add space between the icons */
+        font-size: 16px; /* Adjust icon size if necessary */
+    }
+
+
+
+    @* .employee-table {
         width: 100%;
         border-collapse: collapse;
         margin-bottom: 20px;
@@ -124,5 +163,103 @@
 
     .btn i {
         margin-right: 5px;
-    }
+    } *@
 </style>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/lib/datatables/js/datatables.bootstrap.js"></script>
+    <script src="~/lib/datatables/js/jquery.datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+
+        $(document).ready(function () {
+           
+            var table = $('#tbid').DataTable({
+                // Customize the "Show entries" dropdown
+                "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                "pagingType": "full_numbers",
+                "pageLength": 5,
+                "dom": '<"top"l>rt<"bottom"ip><"clear">',
+                "ordering": true,
+                "searching": true,
+                "language": {
+                    "paginate": {
+                        "first": '<i class="fas fa-angle-double-left paginate-icon"></i>',
+                        "previous": '<i class="fas fa-angle-left paginate-icon"></i>',
+                        "next": '<i class="fas fa-angle-right paginate-icon"></i>',
+                        "last": '<i class="fas fa-angle-double-right paginate-icon"></i>'
+                    }
+                }
+            });
+
+            // Handle the click event of delete buttons
+            $(document).on('click', '.delete-btn', function () {
+                var deleteId = $(this).data('id');  // Get the ID of the employee
+
+                // Show SweetAlert2 confirmation popup
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: 'No, cancel'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // If confirmed, proceed with AJAX call to delete
+                        $.ajax({
+                            url: '/Employee/Delete/' + deleteId,  // Replace with actual URL to your delete action
+                            type: 'POST',
+                            success: function (response) {
+                                // On success, show a confirmation popup
+                                Swal.fire(
+                                    'Deleted!',
+                                    'The record has been deleted.',
+                                    'success'
+                                ).then(()=> {
+                                    location.reload();
+                                })
+                                
+                                
+                            },
+                            error: function (xhr, status, error) {
+                                // Handle error
+                                Swal.fire(
+                                    'Error!',
+                                    'There was a problem deleting the record.',
+                                    'error'
+                                );
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Custom search filters
+            $('#names').on('keyup', function () {
+                table.columns(1).search(this.value).draw();
+            });
+
+            $('#emails').on('keyup', function () {
+                table.columns(2).search(this.value).draw();
+            });
+
+            $('#dob').on('keyup', function () {
+                table.columns(4).search(this.value).draw();
+            });
+
+            $('#mobile').on('keyup', function () {
+                table.columns(3).search(this.value).draw();
+            });
+        });
+
+
+    </script>
+
+}
