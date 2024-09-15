@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using EmployeeManagement.Core.Models;
 using EmployeeManagement.Core.Models.Base;
+using Microsoft.Identity.Client;
 
 namespace EmployeeManagement.Web.ViewModels
 {
@@ -28,18 +29,19 @@ namespace EmployeeManagement.Web.ViewModels
 
         public string? PhotoPath { get; set; }
 
-        [Required(ErrorMessage = "Image file is required.")]
         public IFormFile? ImageFile { get; set; }
 
         public string? FullName { get; set; }
 
 
-        public List<Employee>? Employeesv { get; set; }
-        public int? TotalPages { get; set; }
-        public int? PageNumber { get; set; }
-        public int? PageSize { get; set; }
+        public IEnumerable<Employee>? Employeesv { get; set; }
+        public PaginationViewModel? paginationViewModel { get; set; }
+        public string? SName { get; set; }
+        public string? SEmail { get; set; }
+        public string? SMobile { get; set; }
+        public DateOnly? SDOB { get; set; }
+        public Double? TotalCount { get; set; }
 
-        public bool HasPreviousPage => PageNumber > 1;
-        public bool HasNextPage => PageNumber < TotalPages;
+        
     }
 }

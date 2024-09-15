@@ -16,8 +16,9 @@ namespace EmployeeManagement.Repo.IRepositories
         Task SaveChangesAsync();      
         Task<IList<T>> GetAllAsync();
         Task<T> GetIdAsync(Guid id);
-        Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize);
-        Task<int> GetTotalProductsCountAsync();
-        Task AddProductAsync(Employee product);
+        //Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize);
+        //Task<int> GetTotalProductsCountAsync();
+        //Task AddProductAsync(Employee product);
+
     }
 }

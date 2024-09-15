@@ -1,4 +1,5 @@
 ﻿using EmployeeManagement.Core.Models;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,10 @@ namespace EmployeeManagement.Service.Services.IService
         Task SaveChangesAsync();
         Task<IEnumerable<Employee>> GetAllAsync();
         Task<Employee> GetIdAsync(Guid id);
-        Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize);
-        Task<int> GetTotalProductsCountAsync();
-        Task AddProductAsync(Employee product);
+        //Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize);
+        //Task<int> GetTotalProductsCountAsync();
+        //Task AddProductAsync(Employee product);
+
+        Task<(IEnumerable<Employee> Employees, int TotalCount)> GetEmployeesAsync(string searchString,string SEmail , string SMobile, DateOnly? DateOfBirth, int page, int pageSize);
     }
 }

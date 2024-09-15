@@ -10,5 +10,7 @@ namespace EmployeeManagement.Repo.IRepositories
     public interface IEmployeeRepository : IRepository<Employee>
     {
         // You can define specific methods for EmployeeRepository here if needed.
+        Task<IEnumerable<Employee>> GetEmployeesAsync(string searchString,string SEmail, string SMobile, DateOnly? DateOfBirth, int skip, int take);
+        Task<int> GetTotalCountAsync(string searchString,string SEmail, string SMobile, DateOnly? DateOfBirth);
     }
 }

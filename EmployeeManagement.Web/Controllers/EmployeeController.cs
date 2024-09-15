@@ -52,17 +52,15 @@ public class EmployeeController : Controller
 
             await _employeeService.InsertAsync(obj);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index1");
         }
 
         return View(emp);
     }
 
-    // Method to upload and resize image
     public void FileUpload(IFormFile file, string path)
     {
-        // Resize dimensions
-        int width = 50;  // You can adjust these values based on your requirements
+        int width = 50;  
         int height = 50;
 
         using (var stream = new MemoryStream())
@@ -70,7 +68,7 @@ public class EmployeeController : Controller
             file.CopyTo(stream);
             using (var img = System.Drawing.Image.FromStream(stream))
             {
-                // Resize the image
+      
                 var resizedImage = new Bitmap(img, new Size(width, height));
 
                 resizedImage.Save(path);
@@ -85,10 +83,77 @@ public class EmployeeController : Controller
         return View(obj);
     }
 
- 
+
+    //[HttpPost]
+    //public async Task<IActionResult> Edit(Employee emp)
+    //{
+    //    if (ModelState.IsValid)
+    //    {
+    //        var existingEmployee = await _employeeService.GetIdAsync(emp.Id);
+
+    //        if (existingEmployee != null)
+    //        {
+    //            if (emp.ImageFile != null)
+    //            {
+    //                var path = _webHostEnvironment.WebRootPath;
+    //                var filePath = "images/" + emp.ImageFile.FileName;
+    //                var fullPath = Path.Combine(path, filePath);
+
+    //                if (!string.IsNullOrEmpty(existingEmployee.PhotoPath))
+    //                {
+    //                    var oldPath = Path.Combine(path, existingEmployee.PhotoPath);
+    //                    if (System.IO.File.Exists(oldPath))
+    //                    {
+    //                        System.IO.File.Delete(oldPath);
+    //                    }
+    //                }
+
+
+    //                FileUpload(emp.ImageFile, fullPath);
+
+    //                existingEmployee.PhotoPath = filePath;
+    //                existingEmployee.FirstName = emp.FirstName;
+    //                existingEmployee.LastName = emp.LastName;
+    //                existingEmployee.DateOfBirth = emp.DateOfBirth;
+    //                existingEmployee.Email = emp.Email;
+    //                existingEmployee.Mobile = emp.Mobile;
+
+    //                await _employeeService.UpdateAsync(existingEmployee);
+    //                return RedirectToAction("Index");
+    //            }
+
+    //            else
+    //            {
+    //                existingEmployee.PhotoPath = emp.PhotoPath;
+    //                existingEmployee.FirstName = emp.FirstName;
+    //                existingEmployee.LastName = emp.LastName;
+    //                existingEmployee.DateOfBirth = emp.DateOfBirth;
+    //                existingEmployee.Email = emp.Email;
+    //                existingEmployee.Mobile = emp.Mobile;
+    //                await _employeeService.UpdateAsync(existingEmployee);
+    //                return RedirectToAction("Index");
+
+    //            }
+
+
+
+
+    //            return RedirectToAction("Index");
+    //        }
+    //    }
+
+    //    return View(emp);
+    //}
+
+
     [HttpPost]
     public async Task<IActionResult> Edit(Employee emp)
     {
+        if (ModelState.ContainsKey("ImageFile"))
+        {
+            ModelState.Remove("ImageFile");
+        }
+
         if (ModelState.IsValid)
         {
             var existingEmployee = await _employeeService.GetIdAsync(emp.Id);
@@ -110,10 +175,12 @@ public class EmployeeController : Controller
                         }
                     }
 
-                  
                     FileUpload(emp.ImageFile, fullPath);
-
-                    existingEmployee.PhotoPath = filePath;
+                    existingEmployee.PhotoPath = filePath; 
+                }
+                else
+                {
+                    existingEmployee.PhotoPath = emp.PhotoPath; 
                 }
 
                 existingEmployee.FirstName = emp.FirstName;
@@ -123,13 +190,13 @@ public class EmployeeController : Controller
                 existingEmployee.Mobile = emp.Mobile;
 
                 await _employeeService.UpdateAsync(existingEmployee);
-
                 return RedirectToAction("Index");
             }
         }
 
         return View(emp);
     }
+
 
 
     public async Task<IActionResult> Delete(Guid id)
@@ -139,22 +206,42 @@ public class EmployeeController : Controller
         return Json(new { success = true });
     }
 
-    public async Task<IActionResult> Index1(int pageNumber = 1, int pageSize = 5)
+    //public async Task<IActionResult> Index1(int pageNumber = 1, int pageSize = 5)
+    //{
+    //    var emp = await _employeeService.GetPagedProductsAsync(pageNumber, pageSize);
+    //    var totalEmp = await _employeeService.GetTotalProductsCountAsync();
+
+    //    var totalPages = (int)Math.Ceiling(totalEmp / (double)pageSize);
+
+    //    var viewModel = new EmployeeViewModel
+    //    {
+    //        Employeesv = emp,
+    //        TotalPages = totalPages,
+    //        PageNumber = pageNumber,
+    //        PageSize = pageSize
+    //    };
+
+    //    return View(viewModel);
+    //}
+
+    public async Task<IActionResult> Index1(string? searchString,string? Email,string? Mobile, DateOnly? DateOfBirth, int page = 1)
     {
-        var emp = await _employeeService.GetPagedProductsAsync(pageNumber, pageSize);
-        var totalEmp = await _employeeService.GetTotalProductsCountAsync();
+        int pageSize = 5;
+       
 
-        var totalPages = (int)Math.Ceiling(totalEmp / (double)pageSize);
+        var (employees, totalCount) = await _employeeService.GetEmployeesAsync(searchString, Email,Mobile, DateOfBirth, page, pageSize);
 
-        var viewModel = new EmployeeViewModel
+        var obj = new EmployeeViewModel
         {
-            Employeesv = emp,
-            TotalPages = totalPages,
-            PageNumber = pageNumber,
-            PageSize = pageSize
+            Employeesv = employees,
+            SName = searchString,
+            SEmail = Email,
+            SMobile = Mobile,
+            SDOB = DateOfBirth,
+            paginationViewModel = new PaginationViewModel(totalCount, page, pageSize)
         };
 
-        return View(viewModel);
+        return View(obj);
     }
 
 }

@@ -64,25 +64,25 @@ namespace EmployeeManagement.Repo.Repositories
         {
             return await _dbSet.FindAsync(id);
         }
-        public async Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize)
-        {
-            return await _context.Employees
-                .OrderBy(p => p.Id)
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
-        }
+        //public async Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize)
+        //{
+        //    return await _context.Employees
+        //        .OrderBy(p => p.Id)
+        //        .Skip((pageNumber - 1) * pageSize)
+        //        .Take(pageSize)
+        //        .ToListAsync();
+        //}
 
-        public async Task<int> GetTotalProductsCountAsync()
-        {
-            return await _context.Employees.CountAsync();
-        }
+        //public async Task<int> GetTotalProductsCountAsync()
+        //{
+        //    return await _context.Employees.CountAsync();
+        //}
 
-        public async Task AddProductAsync(Employee employee)
-        {
-            _context.Employees.Add(employee);
-            await _context.SaveChangesAsync();
-        }
+        //public async Task AddProductAsync(Employee employee)
+        //{
+        //    _context.Employees.Add(employee);
+        //    await _context.SaveChangesAsync();
+        //}
 
 
     }

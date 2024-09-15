@@ -21,8 +21,8 @@ D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\bin\Debug\net8.
 D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Service.pdb
 D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Core.dll
 D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Repo.dll
-D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Repo.pdb
 D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Core.pdb
+D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\bin\Debug\net8.0\EmployeeManagement.Repo.pdb
 D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.csproj.AssemblyReference.cache
 D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.GeneratedMSBuildEditorConfig.editorconfig
 D:\WebDev\Employee\EmployeeManagement\EmployeeManagement.Service\obj\Debug\net8.0\EmployeeManagement.Service.AssemblyInfoInputs.cache

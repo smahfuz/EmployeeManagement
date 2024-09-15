@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zoyOX53FQl/XnLfiA3WOOFNFqXaEHfSVIYxc2D2LrS0=",
+  "Hash": "/w9PVd4GK7GQiHyyBG+UMzCUMTFmDwkPwHdf+1aEEWU=",
   "Source": "EmployeeManagement.Web",
   "BasePath": "_content/EmployeeManagement.Web",
   "Mode": "Default",
@@ -188,12 +188,12 @@
       "OriginalItemSpec": "wwwroot\\images\\459580959_1068166768393807_1843635909708214000_n.jpg"
     },
     {
-      "Identity": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6217651681873740061.jpg",
+      "Identity": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6095945159247246640.jpg",
       "SourceId": "EmployeeManagement.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\",
       "BasePath": "_content/EmployeeManagement.Web",
-      "RelativePath": "images/6217651681873740061.jpg",
+      "RelativePath": "images/6095945159247246640.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -204,7 +204,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\6217651681873740061.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\6095945159247246640.jpg"
     },
     {
       "Identity": "D:\\WebDev\\Employee\\EmployeeManagement\\EmployeeManagement.Web\\wwwroot\\images\\6228906738162186681.jpg",
