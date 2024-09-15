@@ -1,11 +1,18 @@
-﻿@model EmployeeManagement.Web.ViewModels.EmployeeViewModel
+﻿@* @model EmployeeManagement.Web.ViewModels.EmployeeViewModel
+ *@
+
+ @using EmployeeManagement.Web.Models
+@using EmployeeManagement.Web.ViewModels
+ @model EmployeeViewModel
+
 
 <!-- Search Box -->
 <div class="search-container">
-    <form asp-action="Index" method="get" class="form-inline search-box">
+    <form id="searchForm" method="get" class="form-inline search-box">
         <div class="form-group">
-            <input type="text" name="Name" class="form-control" placeholder="Name" id="names" />
-            <input type="text" name="DateOfBirth" class="form-control" placeholder="Date of Birth" id="dob" />
+            <!-- Name search input matches 'searchString' -->
+            <input type="text" name="searchString" class="form-control" placeholder="Name" />
+            <input type="date" name="DateOfBirth" class="form-control" placeholder="Date of Birth" id="dob" value="" />
             <input type="email" name="Email" class="form-control" placeholder="Email" id="emails" />
             <input type="text" name="Mobile" class="form-control" placeholder="Mobile" id="mobile" />
             <button type="submit" class="btn btn-primary search-btn">
@@ -14,7 +21,9 @@
         </div>
     </form>
 </div>
-<table class="table">
+
+
+<table class="table" id="tbid">
     <thead>
         <tr>
             <th>Photo</th>
@@ -53,103 +62,252 @@
     </tbody>
 </table>
 
-<div>
-    <ul class="pagination">
-        <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
-            <a class="page-link" asp-action="Index1" asp-route-pageNumber="@(Model.PageNumber - 1)" asp-route-pageSize="@Model.PageSize">Previous</a>
-        </li>
+<div class="d-flex justify-content-end">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end flex-wrap">
+                    <!-- First Page Icon -->
+                    <li class="page-item @(Model.paginationViewModel.CurrentPage == 1 ? "disabled" : "")">
+                        <a class="page-link" asp-controller="Employee" asp-action="Index1"
+                           asp-route-searchString="@Model.SName"
+                           asp-route-page="1" aria-label="First">
+                            <span aria-hidden="true">&laquo;&laquo;</span>
+                        </a>
+                    </li>
 
-        @for (var i = 1; i <= Model.TotalPages; i++)
-        {
-            <li class="page-item @(i == Model.PageNumber ? "active" : "")">
-                <a class="page-link" asp-action="Index1" asp-route-pageNumber="@i" asp-route-pageSize="@Model.PageSize">@i</a>
-            </li>
-        }
+                    <!-- Previous Page Icon -->
+                    <li class="page-item @(Model.paginationViewModel.HasPreviousPage ? "" : "disabled")">
+                        <a class="page-link" asp-controller="Employee" asp-action="Index1"
+                           asp-route-searchString="@Model.SName"
+                           asp-route-page="@(Model.paginationViewModel.CurrentPage - 1)" aria-label="Previous">
+                            <span aria-hidden="true">&lsaquo;</span>
+                        </a>
+                    </li>
 
-        <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
-            <a class="page-link" asp-action="Index1" asp-route-pageNumber="@(Model.PageNumber + 1)" asp-route-pageSize="@Model.PageSize">Next</a>
-        </li>
-    </ul>
+                    <!-- Page Numbers -->
+                    @for (int i = 1; i <= Model.paginationViewModel.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == Model.paginationViewModel.CurrentPage ? "active" : "")">
+                            <a class="page-link" asp-controller="Employee" asp-action="Index1"
+                               asp-route-searchString="@Model.SName"
+                               asp-route-page="@i">@i</a>
+                        </li>
+                    }
+
+                    <!-- Next Page Icon -->
+                    <li class="page-item @(Model.paginationViewModel.HasNextPage ? "" : "disabled")">
+                        <a class="page-link" asp-controller="Employee" asp-action="Index1"
+                           asp-route-searchString="@Model.SName"
+                           asp-route-page="@(Model.paginationViewModel.CurrentPage + 1)" aria-label="Next">
+                            <span aria-hidden="true">&rsaquo;</span>
+                        </a>
+                    </li>
+
+                    <!-- Last Page Icon -->
+                    <li class="page-item @(Model.paginationViewModel.CurrentPage == Model.paginationViewModel.TotalPages ? "disabled" : "")">
+                        <a class="page-link" asp-controller="Employee" asp-action="Index1"
+                           asp-route-searchString="@Model.SName"
+                           asp-route-page="@(Model.paginationViewModel.TotalPages)" aria-label="Last">
+                            <span aria-hidden="true">&raquo;&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </div>
+
+
+
 <style>
 
-    .search-container {
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: flex-start;
-    }
 
-    .search-box {
-        border: 2px solid #ccc; /* Border around the search box */
-        border-radius: 10px; /* Rounded corners */
-        padding: 10px; /* Padding inside the box */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
 
-    .form-group {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        width: 100%;
-    }
+.search-box {
+    border: 2px solid #ccc; /* Border around the search box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the box */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
-    .form-control {
-        width: calc(100% / 5 - 15px); /* Adjust input field width */
-    }
+.form-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
 
-    .search-btn {
-        background-color: transparent;
-        border: none;
-        font-size: 20px;
-        color: #007bff;
-    }
+.form-control {
+    width: calc(100% / 5 - 15px); /* Adjust input field width */
+}
 
-    .pagination-container {
-        text-align: right; /* Align pagination to the right */
-        margin-top: 20px;
-    }
+.search-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #007bff;
+}
 
-    .dataTables_paginate {
-        float: right; /* Float pagination controls to the right */
-    }
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
 
-    .employee-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-    }
+.table th, .table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black; /* Border around the cells */
+}
 
-        .employee-table th, .employee-table td {
-            text-align: center;
-            padding: 10px;
-            border: 1px solid black;
-        }
+.table th {
+    background-color: #f1f1f1; /* Light background for headers */
+}
 
-        .employee-table th {
-            background-color: #f1f1f1;
-        }
+/* Action Buttons */
+.btn i {
+    margin-right: 5px;
+}
 
-    .btn i {
-        margin-right: 5px;
-    }
+/* Pagination Styling */
+.pagination-container {
+    text-align: right; /* Align pagination to the right */
+    margin-top: 20px;
+}
 
-    .paginate-icon {
-        margin: 0 5px; /* Add space between the icons */
-        font-size: 16px; /* Adjust icon size if necessary */
-    }
+.dataTables_paginate {
+    float: right; /* Float pagination controls to the right */
+}
 
-    .dataTables_wrapper .dataTables_paginate .paginate_button {
-        margin: 0 10px; /* Adds space between page numbers */
-        font-size: 16px; /* Adjusts font size for better visibility */
-    }
+.pagination {
+    display: flex;
+    justify-content: flex-end; /* Align pagination to the right */
+}
 
-        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-            background-color: #f1f1f1; /* Adds hover effect */
-            border-radius: 5px;
-        }
+.pagination li a {
+    color: blue;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
 
+.pagination li a:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination li.active a {
+    background-color: blue;
+    color: white;
+    border-color: blue;
+}
+
+.paginate-icon {
+    margin: 0 5px; /* Add space between the icons */
+    font-size: 16px; /* Adjust icon size */
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    margin: 0 10px; /* Adds space between page numbers */
+    font-size: 16px; /* Adjusts font size for better visibility */
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #f1f1f1; /* Adds hover effect */
+    border-radius: 5px;
+}
 </style>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/lib/datatables/js/datatables.bootstrap.js"></script>
+    <script src="~/lib/datatables/js/jquery.datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        $(document).ready(function () {
+            var table = $('#tbid').DataTable({
+                "dom": '<"top"l>rt<"bottom"ip><"clear">',
+                "ordering": true,
+                "searching": false,
+                "paging": false
+            });
+
+            $(document).on('click', '.delete-btn', function () {
+                var deleteId = $(this).data('id');  // Get the ID of the employee
+
+                // Show SweetAlert2 confirmation popup
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: 'No, cancel'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // If confirmed, proceed with AJAX call to delete
+                        $.ajax({
+                            url: '/Employee/Delete/' + deleteId,  // Replace with actual URL to your delete action
+                            type: 'POST',
+                            success: function (response) {
+                                // On success, show a confirmation popup
+                                Swal.fire(
+                                    'Deleted!',
+                                    'The record has been deleted.',
+                                    'success'
+                                ).then(() => {
+                                    location.reload();
+                                })
+
+
+                            },
+                            error: function (xhr, status, error) {
+                                // Handle error
+                                Swal.fire(
+                                    'Error!',
+                                    'There was a problem deleting the record.',
+                                    'error'
+                                );
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Intercept form submission to prevent page reload
+            $('#searchBtn').on('click', function (e) {
+                e.preventDefault(); // Prevent default button behavior
+
+                // Perform AJAX request to submit the form data
+                $.ajax({
+                    url: $('#searchForm').attr('action'), // Form action URL
+                    type: 'GET', // Form method (GET in your case)
+                    data: $('#searchForm').serialize(), // Serialize form data
+                    success: function (response) {
+                        // Update the table with new data if needed
+                        console.log('Search completed successfully');
+                        // Handle your response data here
+                    },
+                    error: function () {
+                        console.log('Error during search');
+                    }
+                });
+            });
+        });
+    </script>
+}
 

@@ -2,6 +2,7 @@
 using EmployeeManagement.Repo.IRepositories;
 using EmployeeManagement.Repo.Repositories;
 using EmployeeManagement.Service.Services.IService;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,19 +54,43 @@ namespace EmployeeManagement.Service.Services.Service
             await _employeeRepository.UpdateAsync(obj);
         }
 
-        public async Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize)
+        //public async Task<List<Employee>> GetPagedProductsAsync(int pageNumber, int pageSize)
+        //{
+        //    return await _employeeRepository.GetPagedProductsAsync(pageNumber, pageSize);
+        //}
+
+        //public async Task<int> GetTotalProductsCountAsync()
+        //{
+        //    return await _employeeRepository.GetTotalProductsCountAsync();
+        //}
+
+        //public async Task AddProductAsync(Employee employee)
+        //{
+        //    await _employeeRepository.AddProductAsync(employee);
+        //}
+
+        //public async Task<(IEnumerable<Employee> Employees, int TotalCount)> GetEmployeesAsync(string searchString,string SEmail,string SMobile, DateOnly DateOfBirth, int page, int pageSize)
+        //{
+        //    int skip = (page - 1) * pageSize;
+        //    var employees = await _employeeRepository.GetEmployeesAsync(searchString,SEmail,SMobile, DateOfBirth, skip, pageSize);
+        //    var totalCount = await _employeeRepository.GetTotalCountAsync(searchString,SEmail,SMobile, DateOfBirth);
+
+        //    return (employees, totalCount);
+        //}
+
+        public async Task<(IEnumerable<Employee> Employees, int TotalCount)> GetEmployeesAsync(string searchString, string SEmail, string SMobile, DateOnly? DateOfBirth, int page, int pageSize)
         {
-            return await _employeeRepository.GetPagedProductsAsync(pageNumber, pageSize);
+            int skip = (page - 1) * pageSize;
+            var employees = await _employeeRepository.GetEmployeesAsync(searchString, SEmail, SMobile, DateOfBirth, skip, pageSize);
+            var totalCount = await _employeeRepository.GetTotalCountAsync(searchString, SEmail, SMobile, DateOfBirth);
+
+            return (employees, totalCount);
         }
 
-        public async Task<int> GetTotalProductsCountAsync()
-        {
-            return await _employeeRepository.GetTotalProductsCountAsync();
-        }
 
-        public async Task AddProductAsync(Employee employee)
-        {
-            await _employeeRepository.AddProductAsync(employee);
-        }
+        //public Task<int> GetTotalProductsCountAsync()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
